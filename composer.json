@@ -1,0 +1,17 @@
+{
+    "name": "qnyt\/weather",
+    "description": "study how to build a php package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "qnyt",
+            "email": "508110504@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Qnyt\\Weather\\": "src"
+        }
+    }
+}
