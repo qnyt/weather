@@ -1,21 +1,28 @@
 {
-    "name": "qnyt\/weather",
-    "description": "study how to build a php package",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "qnyt",
-            "email": "508110504@qq.com"
-        }
-    ],
-    "require": {
-        "guzzlehttp/guzzle": "^6.3",
-        "phpunit/phpunit": "^7.4",
-        "mockery/mockery": "^1.2"
-    },
-    "autoload": {
-        "psr-4": {
-            "Qnyt\\Weather\\": "./src/"
-        }
+  "name": "qnyt\/weather",
+  "description": "study how to build a php package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "qnyt",
+      "email": "508110504@qq.com"
     }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^6.3",
+    "phpunit/phpunit": "^7.4",
+    "mockery/mockery": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Qnyt\\Weather\\": "./src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Overtrue\\Weather\\ServiceProvider"
+      ]
+    }
+  }
 }
