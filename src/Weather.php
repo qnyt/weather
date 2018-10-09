@@ -39,6 +39,16 @@ class Weather
         $this->guzzleOptions = $options;
     }
 
+    public function getLiveWeather($city, $format = 'json')
+    {
+        return $this->getWeather($city, 'base', $format);
+    }
+
+    public function getForecastsWeather($city, $format = 'json')
+    {
+        return $this->getWeather($city, 'all', $format);
+    }
+
     /**
      * 获取天气
      * @param string|int $city 城市名/高德地址位置 adcode，比如：“深圳” 或者（adcode：440300）；
