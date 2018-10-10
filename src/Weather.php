@@ -34,7 +34,7 @@ class Weather
      * 设置guzzle的client的参数
      * @param array $options
      */
-    public function setGuzzleOptions(array $options)
+    public function setGuzzleOptions($options)
     {
         $this->guzzleOptions = $options;
     }
@@ -55,7 +55,7 @@ class Weather
      * @param string $type 返回内容类型：base: 返回实况天气 / all:返回预报天气；
      * @param string $format 输出的数据格式，默认为 json 格式，当 output 设置为 “xml” 时，输出的为 XML 格式的数据。
      */
-    public function getWeather($city, string $type = 'base', string $format = 'json')
+    public function getWeather($city, $type = 'base', $format = 'json')
     {
         $url = 'https://restapi.amap.com/v3/weather/weatherInfo';
 
