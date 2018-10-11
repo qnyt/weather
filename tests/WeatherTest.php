@@ -1,8 +1,12 @@
 <?php
-/**
- * User: john
- * Date: 18-10-9
- * Time: 上午1:10
+
+/*
+ * This file is part of the qnyt/weather.
+ *
+ * (c) qnyt <508110504@qq.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Qnyt\Weather\Tests;
@@ -16,10 +20,8 @@ use Qnyt\Weather\Exceptions\InvalidArgumentException;
 use Qnyt\Weather\Weather;
 use PHPUnit\Framework\TestCase;
 
-
 class WeatherTest extends TestCase
 {
-
     public function testGetWeather()
     {
         // 创建模拟接口响应值。
@@ -35,7 +37,7 @@ class WeatherTest extends TestCase
                 'city' => '深圳',
                 'output' => 'json',
                 'extensions' => 'base',
-            ]
+            ],
         ])->andReturn($response);
 
         // 将 `getHttpClient` 方法替换为上面创建的 http client 为返回值的模拟方法。
@@ -61,7 +63,6 @@ class WeatherTest extends TestCase
         $w->allows()->getHttpClient()->andReturn($client);
 
         $this->assertSame('<hello>content</hello>', $w->getWeather('深圳', 'all', 'xml'));
-
     }
 
     public function testGetHttpClient()
